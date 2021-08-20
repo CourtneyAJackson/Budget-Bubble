@@ -8,7 +8,7 @@ Budget Buddy
 ## Project Description
 
 Budget Buddy is an Airtable based React app designed to help users track their expenses. 
-A user is able to choose from different expense categories and create a new category, that will render to the expense log on the page.  
+A user is able to choose from different expense categories and create a new category if desired thus rendering an easy to read expense log.  
 
 ## Wireframes
 

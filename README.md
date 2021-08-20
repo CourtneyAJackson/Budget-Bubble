@@ -61,7 +61,7 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
+
 
 - Allow users to access the page through home page start button
 -  Redirect users to main page 
@@ -71,7 +71,6 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 -  Allow users to create an expense log by adding expenses with amounts to that log
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
 - Calculate all the expenses form a given expense log
 - Allow users to save their monthly expense logs
@@ -81,7 +80,6 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
 |  Day | Deliverable | Status
 |---|---| ---|

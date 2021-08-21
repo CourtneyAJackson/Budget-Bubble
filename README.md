@@ -97,16 +97,22 @@ Tell us how long you anticipate spending on each area of development. Be sure to
 
 Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
+
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-
-| App/Home | H | 2hrs  |    |   |
+| Adding Form | H | 3hrs| hrs | hrs |
+| Creating API| H | 2hrs| hrs | hrs |
 | Working with API | H | 3hrs| hrs | hrs |
-| Expense Log | H |  5hrs |   |   |
-| Expense Amount| H| 5hrs |   |   |
-| Expense Category | H | 5hrs |    |  |
-| Css | H |  4hrs |     |     |
-| Total | H | 24hrs|  |  |
+|Creating Components| H | 2hrs| hrs | hrs |
+|Organizing Components| H | 3hrs| hrs | hrs |
+|Creating Homepage| H | 2hrs| hrs | hrs |
+|Implementing State/props| H | 4hrs| hrs | hrs |
+|Routes/Paths/Links| H | 4hrs| hrs | hrs |
+|Css Design| H | 3hrs| hrs | hrs |
+|Polish Design| H | 2hrs| hrs | hrs |
+|Refactoring code| H | 2hrs| hrs | hrs |
+|Testing App| H | 1hr| hrs | hrs |
+| Total | H | 31hrs| hrs | hrs |
 
 ## SWOT Analysis
 

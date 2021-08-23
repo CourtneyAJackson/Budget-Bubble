@@ -49,6 +49,7 @@ function App() {
       <Route path="/new">
         {
           bills.map((bill, index) => {
+            
             return (
               <>
                 <h3>Name: {bill.fields.name}</h3>

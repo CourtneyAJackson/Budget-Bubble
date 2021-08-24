@@ -3,7 +3,8 @@ import {useState, useEffect} from "react"
 import { Route,Link } from "react-router-dom"
 import { baseURL, config } from "../services"
 import Create from "./Create"
-import Log from "./Log"
+import Calculate from "./Calculate"
+
 
 
 
@@ -14,7 +15,7 @@ function Form(props) {
 
   const [name, setName] = useState("")
   const [amount, setAmount] = useState("")
- const [toggleFetch, setToggleFetch] = useState(false)
+  const [toggleFetch, setToggleFetch] = useState(false)
   
 
   
@@ -27,21 +28,11 @@ const handleSubmit = async (event) => {
     amount,
   }
   await axios.post(baseURL, {fields: newBill}, config)
-  console.log(newBill)
-  props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
-  }
-
-  // const handleSelect = async (event) => {
-  //   const newBill = {
-  //     name,
-      
-  //   }
-  //   await axios.post(baseURL, {fields: newBill}, config)
-  //   console.log(newBill)
  
-  //   }
-  
-
+  props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+  console.log(newBill)
+  }
+  //console.log(newBill)
 
   return (
     <>
@@ -50,13 +41,13 @@ const handleSubmit = async (event) => {
       <h1>Form Page here!</h1>
     
       <label htmlFor="expenses category">Expenses Category: </label>
-    {/* <form onSelect={handleSelect}> */}
+   
         <select value={name} onChange={e => setName(e.target.value)}>
           <option value="rent/mortgagte" selected  >Rent/Mortgage</option>
         <option value="car note">Car Note</option>
         <option value="phone">Phone</option>
         <option value="food">Food</option>
-        {/* <option value="create category">Create Category</option> */}
+      
       </select>
   
       <br></br>
@@ -78,7 +69,9 @@ const handleSubmit = async (event) => {
       <br></br>
         <label htmlFor="expenses log">Expenses Log:</label>
 
-     
+       
+        <button type="submit">Calculate Expenses</button>
+       
       </form>
       
    

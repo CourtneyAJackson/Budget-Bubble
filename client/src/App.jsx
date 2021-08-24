@@ -5,14 +5,15 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { baseURL, config } from "./services"
 import Create from "./components/Create"
-import Log from "./components/Log"
+import List from "./components/List"
+import Calculate from "./components/Calculate";
 
 
 function App() {
 
   const [bills, setBills] = useState([])
   const [toggleFetch, setToggleFetch] = useState(false)
-
+  
 
   // const handleSubmit
   //event.preventDefault()
@@ -26,6 +27,7 @@ function App() {
     getBills()
   }, [toggleFetch])
 
+  
   console.log(bills)
 
 
@@ -34,9 +36,7 @@ function App() {
   return (
     <>
       <Route path="/" exact>
-        <Create bills={bills}/>
 
-        {/* <form onSubmit={handleSubmit}> */}
         <h1>Budget Buddy</h1>
         <h2>The Budgeting App You Can Count On!</h2>
 
@@ -44,7 +44,7 @@ function App() {
         <button type="submit" onChange={e => setBills(e.target.value)}>
           <Link to="/new">Start Budgeting!</Link>
         </button>
-        {/* </form> */}
+     
       </Route>
 
       <Route path="/new">
@@ -55,14 +55,14 @@ function App() {
             
             return (
               <>
-                {bill.fields.amount !== "0" ? <h3>Name: {bill.fields.name}    Amount: ${bill.fields.amount}</h3> : <></>}
-                
+                {bill.fields.amount !== "0" ? <List setToggleFetch={setToggleFetch} toggleFetch={ toggleFetch}bill={bill}/> : <></>}
+               
               </>
             )
           })
           
         }
-       
+       {/* <h3>Name: {bill.fields.name}    Amount: ${bill.fields.amount}</h3> */}
 
         <>
 
@@ -70,12 +70,14 @@ function App() {
         </>
 
 
-          
+        <Calculate bills={bills} />
+      
+        
 
       </Route>
+
       <Route path="/Create">
-        <Create setToggleFetch={setToggleFetch} />
-    
+        <Create setToggleFetch={setToggleFetch} toggleFetch={ toggleFetch}/>
 
       </Route>
 

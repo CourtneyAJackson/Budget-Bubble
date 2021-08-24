@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-import Log from "./Log"
+import { Link, useHistory } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 import {baseURL, config} from "../services"
@@ -8,7 +7,8 @@ function Create(props) {
 
   const [name, setName] = useState("")
   const [amount, setAmount] = useState("")
-
+  const history = useHistory()
+  const {setToggleFetch, toggleFetch} = props
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -19,7 +19,8 @@ function Create(props) {
     }
     await axios.post(baseURL, { fields: newBill }, config)
     console.log(newBill)
-    //setToggleFetch(!toggleFetch)
+    setToggleFetch(!toggleFetch)
+    history.push("/new")
   }
 
 
@@ -46,7 +47,7 @@ return (
         onChange={e => setAmount(e.target.value)}
         value={amount}
       />
-      <button type="submit"><Link to="/new">Add New Expense</Link></button>
+      <button type="submit">Add New Expense</button>
     </form>
   </>
 )

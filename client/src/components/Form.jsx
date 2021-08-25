@@ -11,6 +11,7 @@ import Calculate from "./Calculate"
 
 
 
+
 function Form(props) {
 
   const [name, setName] = useState("")
@@ -70,11 +71,13 @@ const handleSubmit = async (event) => {
         <label htmlFor="expenses log">Expenses Log:</label>
 
        
-        <button type="submit">Calculate Expenses</button>
+       
        
       </form>
       
-   
+  
+      
+     
     </>
   )
 }

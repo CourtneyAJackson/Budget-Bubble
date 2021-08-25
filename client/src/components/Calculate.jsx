@@ -1,26 +1,22 @@
 import Form from "./Form"
-import {useState} from "react"
+import { useState } from "react"
+import Chart from "./Chart"
 
 function Calculate(props) {
 
-    const [total, setTotal] = useState(null)
-    
-   // const { amount} = props.bills
-  
-  console.log(props.bills.map((bill, index) => {
-    return (
-      bill.fields.amount
-      //   .reduce((acc, curr) => {
-      //   acc += curr
-      // }) 
-      
-    )
-  }))
+  const [total, setTotal] = useState(0.00)
+  // const [difference, setDifference] = useState(null)
 
-  const handleTotal = async (event) => {
+
+  const handleTotal = (event) => {
     event.preventDefault()
-   
-    //console.log(props.bills)
+
+    const numArray = props.bills.map((bill) => Number(bill.fields.amount))
+
+
+    const totalExpenses = numArray.reduce((acc, curr) => acc += curr)
+    setTotal(totalExpenses)
+    console.log(total)
 
 
   }
@@ -28,15 +24,13 @@ function Calculate(props) {
 
   return (
     <>
-      <form onTotal={handleTotal}>
       <h1>Calculate total</h1>
-        {/* <h2>{props.amount}</h2> */}
-        <button type="submit"
-          onClick={e => setTotal(e.target.value)}
-          value={total}
-        >Calculate Expenses</button>
-      </form>
-      </>
+      <button
+        onClick={handleTotal}
+      >Calculate Expenses</button>
+      {total !== 0.00 ? <h1>${total}</h1> : <></>}
+
+    </>
   )
 }
 

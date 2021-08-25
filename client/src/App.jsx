@@ -7,6 +7,8 @@ import { baseURL, config } from "./services"
 import Create from "./components/Create"
 import List from "./components/List"
 import Calculate from "./components/Calculate";
+import Chart from "./components/Chart"
+import { Pie } from "react-chartjs-2"
 
 
 function App() {
@@ -29,8 +31,6 @@ function App() {
 
   
   console.log(bills)
-
-
 
 
   return (
@@ -72,7 +72,8 @@ function App() {
 
         <Calculate bills={bills} />
       
-        
+        <Chart bills={bills} />
+       
 
       </Route>
 

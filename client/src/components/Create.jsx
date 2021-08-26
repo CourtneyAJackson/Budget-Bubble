@@ -30,24 +30,30 @@ function Create(props) {
 
   return (
     <>
-      <form class="create" onSubmit={handleSubmit}>
-        <h1>Add new category here</h1>
-        <label htmlFor="name of expense">Name of Expense:</label>
-        <input id="new expense"
-          type="text"
-          placeholder="Name"
-          onChange={e => setName(e.target.value)}
-          value={name}
-        />
-        <br></br>
-        <label htmlFor="amount of expense">Amount of Expense:</label>
-        <input id="new amount"
-          type="text"
-          placeholder="$.$$"
-          onChange={e => setAmount(e.target.value)}
-          value={amount}
-        />
-        <button type="submit">Add New Expense</button>
+      <form onSubmit={handleSubmit}>
+        <div id="category">
+          <h1>New Category</h1>
+        </div>
+        <div className="create">
+
+          <label htmlFor="name of expense">Name of Expense:</label>
+          <input id="new-expense"
+            type="text"
+            placeholder="Name"
+            onChange={e => setName(e.target.value)}
+            value={name}
+          />
+          <br></br>
+          <label htmlFor="amount of expense">Amount of Expense:</label>
+          <input id="new-amount"
+            type="text"
+            placeholder="$.$$"
+            onChange={e => setAmount(e.target.value)}
+            value={amount}
+          />
+          <br></br>
+          <button type="submit">Add New Expense</button>
+        </div>
       </form>
     </>
   )

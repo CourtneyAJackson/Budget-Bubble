@@ -9,27 +9,26 @@ import List from "./components/List"
 import Calculate from "./components/Calculate";
 import Chart from "./components/Chart"
 import { Pie } from "react-chartjs-2"
+import Footer from "./components/Footer";
 
 
 function App() {
 
   const [bills, setBills] = useState([])
   const [toggleFetch, setToggleFetch] = useState(false)
-  
 
-  // const handleSubmit
-  //event.preventDefault()
+
   useEffect(() => {
     const getBills = async (event) => {
 
       const res = await axios.get(baseURL, config)
-      //console.log(res.data.records)
+
       setBills(res.data.records)
     }
     getBills()
   }, [toggleFetch])
 
-  
+
   console.log(bills)
 
 
@@ -37,16 +36,16 @@ function App() {
     <>
       <Route path="/" exact>
         <div className="title">
-        <h1>Budget Bubble!</h1>
-        <h2>""</h2>
+          <h1>Budget Bubble</h1>
+          <h2>"Track, Grow, Burst With Joy"</h2>
         </div>
-
-        <button id="home-button" type="submit" onChange={e => setBills(e.target.value)}>
-          <Link to="/new">Start Budgeting!</Link>
-        </button>
-      
-          <div>
-        <ul class="float">
+        <div className="wrap">
+          <button id="home-button" type="submit" onChange={e => setBills(e.target.value)}>
+            <Link to="/new">Start Budgeting!</Link>
+          </button>
+        </div>
+        <div>
+          <ul class="float">
             <li><span>$</span></li>
             <li><span>$</span></li>
             <li><span>$</span></li>
@@ -57,42 +56,36 @@ function App() {
             <li><span>$</span></li>
             <li><span>$</span></li>
             <li><span>$</span></li>
-        </ul>
-  </div>
+          </ul>
+        </div>
 
       </Route>
 
       <Route path="/new">
-         <Form bills={ bills} setToggleFetch={setToggleFetch} />
+        <Form bills={bills} setToggleFetch={setToggleFetch} />
         {
           bills.map((bill, index) => {
-          // <button onClick={NaN} >Delete Expense</button>
-            
+
             return (
               <>
-                {bill.fields.amount !== "0" ? <List setToggleFetch={setToggleFetch} toggleFetch={ toggleFetch}bill={bill}/> : <></>}
-               
+                {bill.fields.amount !== "0" ? <List setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} bill={bill} /> : <></>}
+
               </>
             )
           })
-          
+
         }
-       {/* <h3>Name: {bill.fields.name}    Amount: ${bill.fields.amount}</h3> */}
-        <>
-
-
-        </>
 
 
         <Calculate bills={bills} />
-      
-        <Chart bills={bills} />
-       
 
+        <Chart bills={bills} />
+
+        {/* <h4>Budget Buddy Inc | 2021 | <Link to="/">Contact Us</Link></h4> */}
       </Route>
 
       <Route path="/Create">
-        <Create setToggleFetch={setToggleFetch} toggleFetch={ toggleFetch}/>
+        <Create setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} />
 
       </Route>
 

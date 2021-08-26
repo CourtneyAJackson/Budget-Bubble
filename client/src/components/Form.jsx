@@ -2,12 +2,6 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import { Route, Link } from "react-router-dom"
 import { baseURL, config } from "../services"
-import Create from "./Create"
-import Calculate from "./Calculate"
-
-
-
-
 
 
 
@@ -19,8 +13,6 @@ function Form(props) {
   const [toggleFetch, setToggleFetch] = useState(false)
 
 
-
-  //console.log(props.bill)
   const handleSubmit = async (event) => {
     event.preventDefault()
 
@@ -33,18 +25,20 @@ function Form(props) {
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
     console.log(newBill)
   }
-  //console.log(newBill)
+  
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <div class="card">
-          <h1 id="dashboard">Dashboard</h1>
+          <h1 id="dashboard">Budget Bubble</h1>
         </div>
         <div class="expenses">
+          <h2>Dashboard</h2>
+          <br></br>
           <label htmlFor="expenses category">Expenses Category: </label>
 
-          <select value={name} onChange={e => setName(e.target.value)}>
+          <select id="dropdown" value={name} onChange={e => setName(e.target.value)}>
             <option value="rent/mortgagte" selected  >Rent/Mortgage</option>
             <option value="car note">Car Note</option>
             <option value="phone">Phone</option>

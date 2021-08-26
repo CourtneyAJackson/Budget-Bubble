@@ -23,11 +23,17 @@ function Chart(props) {
 
   return (
     <>
-      <Pie
+      <Pie id="pie"
         data={{
           labels: billName,
           datasets: [{
             data: billAmount,
+            backgroundColor: [
+              "orangered",
+              "purple", "green",
+              "yellow", "blue", "gold"
+            ],
+          
           }]
         }}
 

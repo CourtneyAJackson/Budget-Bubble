@@ -36,15 +36,30 @@ function App() {
   return (
     <>
       <Route path="/" exact>
+        <div className="title">
+        <h1>Budget Bubble!</h1>
+        <h2>""</h2>
+        </div>
 
-        <h1>Budget Buddy</h1>
-        <h2>The Budgeting App You Can Count On!</h2>
-
-
-        <button type="submit" onChange={e => setBills(e.target.value)}>
+        <button id="home-button" type="submit" onChange={e => setBills(e.target.value)}>
           <Link to="/new">Start Budgeting!</Link>
         </button>
-     
+      
+          <div>
+        <ul class="float">
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+            <li><span>$</span></li>
+        </ul>
+  </div>
+
       </Route>
 
       <Route path="/new">
@@ -63,7 +78,6 @@ function App() {
           
         }
        {/* <h3>Name: {bill.fields.name}    Amount: ${bill.fields.amount}</h3> */}
-
         <>
 
 

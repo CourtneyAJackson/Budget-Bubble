@@ -24,12 +24,13 @@ function Calculate(props) {
 
   return (
     <>
-      <h1>Calculate total</h1>
-      <button
-        onClick={handleTotal}
-      >Calculate Expenses</button>
-      {total !== 0.00 ? <h1>${total}</h1> : <></>}
-
+      
+        
+        <button id="calculate"
+          onClick={handleTotal}
+        >Calculate Expenses</button>
+       <div id="total"> {total !== 0.00 ? <h1>${total}</h1> : <></>}
+      </div>
     </>
   )
 }

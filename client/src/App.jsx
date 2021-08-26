@@ -29,21 +29,18 @@ function App() {
   }, [toggleFetch])
 
 
-  console.log(bills)
-
 
   return (
     <>
       <Route path="/" exact>
         <div className="title">
           <h1>Budget Bubble</h1>
-          <h2>"Track, Grow, Burst With Joy"</h2>
-        </div>
-        <div className="wrap">
+          <h2>"Track Your Bills The Easy Way"</h2>
           <button id="home-button" type="submit" onChange={e => setBills(e.target.value)}>
-            <Link to="/new">Start Budgeting!</Link>
-          </button>
-        </div>
+            <Link to="/new" className="link">Start Budgeting!</Link>
+            </button>
+          </div>
+        
         <div>
           <ul class="float">
             <li><span>$</span></li>

@@ -57,7 +57,8 @@ function App() {
         </div>
 
       </Route>
-
+    
+    <div className="dashboard-container">
       <Route path="/new">
         <Form bills={bills} setToggleFetch={setToggleFetch} />
         {
@@ -72,7 +73,7 @@ function App() {
           })
 
         }
-
+ 
 
         <Calculate bills={bills} />
 
@@ -84,8 +85,9 @@ function App() {
       <Route path="/Create">
         <Create setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} />
 
-      </Route>
-
+        </Route>
+       
+</div>
     </>
   );
 }

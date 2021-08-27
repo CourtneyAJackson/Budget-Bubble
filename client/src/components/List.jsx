@@ -16,13 +16,15 @@ function List(props) {
   }
 
 
-  return (
+  return ( 
+  <>
+  
     <div class="log">
       <h3>Name: {name}</h3>
       <h3>Amount: {amount}</h3>
       <button onClick={handleDelete}>Delete Expense</button>
     </div>
-
+</>
 
   )
 

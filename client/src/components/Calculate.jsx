@@ -22,7 +22,9 @@ function Calculate(props) {
 
   return (
     <>
-
+      <div className="expense-label">
+  
+   </div>
       <div id="total">
         <button id="calculate"
           onClick={handleTotal}

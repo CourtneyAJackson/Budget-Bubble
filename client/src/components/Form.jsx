@@ -32,9 +32,12 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <div class="card">
           <h1 id="dashboard">Budget Bubble</h1>
+          <br></br>
+          <br></br>
+          <h2>Dashboard</h2>
         </div>
         <div class="expenses">
-          <h2>Dashboard</h2>
+          
           <br></br>
           <label htmlFor="expenses category">Expenses Category: </label>
 
@@ -56,18 +59,28 @@ function Form(props) {
 
           />
           <br></br>
-          <button id="expenseLog" type="submit">Add to Expenses Log</button>
+  
+          
           <br></br>
+          <button id="expense-log" type="submit">Add to Expense Log</button>
+          <br></br>
+        
+          <h4>“ Budgeting isn’t about limiting yourself, 
+        
+its about making the things that excite you POSSIBLE!”
 
+-Annoymous 
+            </h4>
           <label htmlFor="dont see your expense?">Dont See Your Expense?</label>
           <Link to="/Create">Create One!</Link>
         
         <br></br>
         <label htmlFor="expenses log">Expenses Log:</label>
-      </div>
-
-
-
+        </div>
+        
+      <div className="log-title">
+     
+        </div>
       </form>
 
 

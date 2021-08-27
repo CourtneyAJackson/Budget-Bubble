@@ -35,7 +35,7 @@ function App() {
       <Route path="/" exact>
         <div className="title">
           <h1>Budget Bubble</h1>
-          <h2>"Track Your Bills The Easy Way"</h2>
+          <h3>"Track Your Bills The Easy Way!"</h3>
           <button id="home-button" type="submit" onChange={e => setBills(e.target.value)}>
             <Link to="/new" className="link">Start Budgeting!</Link>
             </button>
@@ -78,7 +78,7 @@ function App() {
         <Calculate bills={bills} />
 
         <Chart bills={bills} />
-
+    {/* <Footer/> */}
         {/* <h4>Budget Buddy Inc | 2021 | <Link to="/">Contact Us</Link></h4> */}
       </Route>
 
@@ -86,7 +86,7 @@ function App() {
         <Create setToggleFetch={setToggleFetch} toggleFetch={toggleFetch} />
 
         </Route>
-       
+     
 </div>
     </>
   );

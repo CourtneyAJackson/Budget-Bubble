@@ -34,9 +34,9 @@ function Form(props) {
           <h1 id="dashboard">Budget Bubble</h1>
           <br></br>
           <br></br>
-          <h2>Dashboard</h2>
-        </div>
-        <div class="expenses">
+          <h1>Dashboard</h1>
+        
+        {/* <div class="expenses"> */}
           
           <br></br>
           <label htmlFor="expenses category">Expenses Category: </label>
@@ -65,21 +65,24 @@ function Form(props) {
           <button id="expense-log" type="submit">Add to Expense Log</button>
           <br></br>
         
-          <h4>“ Budgeting isn’t about limiting yourself, 
+           <h4>“ Budgeting isn’t about limiting yourself,
         
 its about making the things that excite you POSSIBLE!”
 
 -Annoymous 
-            </h4>
-          <label htmlFor="dont see your expense?">Dont See Your Expense?</label>
+          </h4>
+          <label htmlFor="dont see your expense?">Dont See Your Expense? </label>
           <Link to="/Create">Create One!</Link>
-        
-        <br></br>
-        <label htmlFor="expenses log">Expenses Log:</label>
         </div>
+        <br></br>
+        
+        <div className="expense-log">
+        <label htmlFor="expenses log">Expenses Log:</label>
+       
         
       <div className="log-title">
      
+          </div>
         </div>
       </form>
 

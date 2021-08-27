@@ -22,7 +22,7 @@ function List(props) {
     <div class="log">
       <h3>Name: {name}</h3>
       <h3>Amount: {amount}</h3>
-      <button onClick={handleDelete}>Delete Expense</button>
+      <button id="delete" onClick={handleDelete}>Delete Expense</button>
     </div>
 </>
 

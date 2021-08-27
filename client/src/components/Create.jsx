@@ -31,11 +31,9 @@ function Create(props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div id="category">
-          <h1>New Category</h1>
-        </div>
+        
         <div className="create">
-
+          <h1>New Category</h1>
           <label htmlFor="name of expense">Name of Expense:</label>
           <input id="new-expense"
             type="text"

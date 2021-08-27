@@ -1,13 +1,13 @@
-# Budget-Buddy
+# Budget-Bubble
 
 # Project Overview
 
 ## Project Name
-Budget Buddy
+Budget Bubble
 
 ## Project Description
 
-Budget Buddy is an Airtable based React app designed to help users track their expenses. 
+Budget Bubble is an Airtable based React app designed to help users track their expenses. 
 A user is able to choose from different expense categories and create a new category if desired thus rendering an easy to read expense log.  
 
 ## Wireframes
@@ -64,11 +64,11 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 
 
 - Allow users to access the page through home page start button
--  Redirect users to main page 
--  Allow users to choose from expenses list in drop down menu
--  Allow useres to input amounts coresponding to the chosen expense item
--  Allow users the option to create a new expense and add to the current expense list
--  Allow users to create an expense log by adding expenses with amounts to that log
+-  Redirect users to main page via React Routes and Links
+-  Allow users to choose from expenses list in drop down menu that is generated from axios GET request to Airtable
+-  Allow useres to input amounts coresponding to the chosen expense item via axios POST request to Airtable
+-  Allow users the option to create a new expense and add to the current expense list by updating the Airtable with created item
+-  Allow users to create an expense log by adding expenses with amounts to that log via axios POST request
 
 #### PostMVP  
 
@@ -76,7 +76,7 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 - Allow users to save their monthly expense logs
 - Provide budgeting tips and guidance to users 
 - Allow users to create profiles
-- 
+- Have a visual reprensetation of expenses (chart/graph)
 
 ## Project Schedule
 
@@ -93,26 +93,21 @@ https://whimsical.com/component-hierarchy-8ibukLxMgr8Uw7AKYcTHtA
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| hrs | hrs |
-| Creating API| H | 2hrs| hrs | hrs |
-| Working with API | H | 3hrs| hrs | hrs |
-|Creating Components| H | 2hrs| hrs | hrs |
-|Organizing Components| H | 3hrs| hrs | hrs |
-|Creating Homepage| H | 2hrs| hrs | hrs |
-|Implementing State/props| H | 4hrs| hrs | hrs |
-|Routes/Paths/Links| H | 4hrs| hrs | hrs |
-|Css Design| H | 3hrs| hrs | hrs |
-|Polish Design| H | 2hrs| hrs | hrs |
-|Refactoring code| H | 2hrs| hrs | hrs |
-|Testing App| H | 1hr| hrs | hrs |
-| Total | H | 31hrs| hrs | hrs |
+| Adding Form | H | 3hrs| 4hrs | 4hrs |
+| Creating API| H | 2hrs| 2hrs | 2hrs |
+| Working with API | H | 3hrs| 2hrs | 2hrs |
+|Creating Components| H | 2hrs| 2hrs | 2hrs |
+|Organizing Components| H | 3hrs| 2.5hrs | 2.5hrs |
+|Creating Homepage| H | 2hrs| 3hrs | 3hrs |
+|Implementing State/props| H | 4hrs| 4rs | 4hrs |
+|Routes/Paths/Links| H | 4hrs| 3hrs | 3hrs |
+|Css Design| H | 3hrs| 5hrs | 5hrs |
+|Polish Design| H | 2hrs| hrs 3| 3hrs |
+|Refactoring code| H | 2hrs| 2hrs | 2hrs |
+|Testing App| H | 1hr| 3hrs | 3hrs |
+| Total | H | 31hrs| 36hrs | 36hrs |
 
 ## SWOT Analysis
 
